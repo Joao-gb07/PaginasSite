@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cicatriza+ · Perfil do Paciente</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="sidebar-top">
+      <div class="sidebar-logo">
+        <div class="logo-icon">＋</div>
+        <span class="logo-text">Cicatriza<strong>+</strong></span>
+      </div>
+
+      <div class="sidebar-user">
+        <div class="avatar">MS</div>
+        <div class="user-info">
+          <span class="user-name">Maria Silva</span>
+          <span class="user-role">Enfermeira · COREN-DF</span>
+        </div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <a href="#" class="nav-item">
+          <span class="nav-icon">⊞</span> Área de trabalho
+        </a>
+        <a href="#" class="nav-item">
+          <span class="nav-icon">⊕</span> Cadastrar paciente
+        </a>
+        <a href="#" class="nav-item active">
+          <span class="nav-icon">👥</span> Meus pacientes
+        </a>
+      </nav>
+    </div>
+
+    <div class="sidebar-bottom">
+      <a href="#" class="nav-item">
+        <span class="nav-icon">⚙</span> Configurações
+      </a>
+      <a href="#" class="nav-item">
+        <span class="nav-icon">↩</span> Sair da conta
+      </a>
+    </div>
+  </aside>
+
+  <!-- CONTEÚDO PRINCIPAL -->
+  <main class="main-content">
+
+    <!-- BREADCRUMB -->
+    <nav class="breadcrumb">
+      <a href="#">Pacientes</a>
+      <span class="breadcrumb-sep">›</span>
+      <span class="breadcrumb-current">João Carlos Oliveira</span>
+    </nav>
+
+    <!-- CABEÇALHO DO PACIENTE -->
+    <div class="patient-header">
+      <div class="patient-header-left">
+        <h1 class="patient-name">João Carlos Oliveira</h1>
+        <p class="patient-meta">67 anos · CPF: 123.456.789-00 · Leito UTI-12</p>
+      </div>
+      <span class="status-badge status-critica">Ferida crítica</span>
+    </div>
+
+    <!-- ABAS -->
+    <div class="tabs-wrapper">
+      <div class="tabs" role="tablist">
+        <button class="tab active" data-tab="avaliacao" role="tab">Avaliação da ferida</button>
+        <button class="tab" data-tab="fotos" role="tab">Fotos da ferida</button>
+        <button class="tab" data-tab="relatorio" role="tab">Relatório de evolução</button>
+      </div>
+    </div>
+
+    <!-- ===== ABA 1: AVALIAÇÃO DA FERIDA ===== -->
+    <section class="tab-content active" id="tab-avaliacao">
+
+      <div class="form-card">
+        <h2 class="section-title">Identificação e Localização</h2>
+        <div class="form-grid two-col">
+          <div class="field">
+            <label>Localização da ferida</label>
+            <select>
+              <option>Calcâneo direito</option>
+              <option>Maléolo esquerdo</option>
+              <option>Região sacral</option>
+              <option>Outro</option>
+            </select>
+          </div>
+          <div class="field">
+            <label>Data da avaliação</label>
+            <input type="date" value="2025-04-16" />
+          </div>
+        </div>
+      </div>
+
+      <div class="form-card">
+        <h2 class="section-title">Descrição da Ferida</h2>
+        <div class="form-grid three-col">
+          <div class="field">
+            <label>Comprimento (cm)</label>
+            <input type="number" placeholder="ex: 4.5" step="0.1" />
+          </div>
+          <div class="field">
+            <label>Largura (cm)</label>
+            <input type="number" placeholder="ex: 3.0" step="0.1" />
+          </div>
+          <div class="field">
+            <label>Profundidade</label>
+            <select>
+              <option>Superficial</option>
+              <option>Parcial</option>
+              <option>Total</option>
+            </select>
+          </div>
+        </div>
+        <div class="field mt-16">
+          <label>Descrição clínica</label>
+          <textarea placeholder="Descreva o aspecto geral da ferida..."></textarea>
+        </div>
+      </div>
+
+      <div class="form-card">
+        <h2 class="section-title">Tipo de Ferida</h2>
+        <div class="radio-grid">
+          <label class="radio-item">
+            <input type="radio" name="tipo-ferida" checked /> Úlcera por pressão
+          </label>
+          <label class="radio-item">
+            <input type="radio" name="tipo-ferida" /> Úlcera venosa
+          </label>
+          <label class="radio-item">
+            <input type="radio" name="tipo-ferida" /> Úlcera arterial
+          </label>
+          <label class="radio-item">
+            <input type="radio" name="tipo-ferida" /> Ferida cirúrgica
+          </label>
+          <label class="radio-item">
+            <input type="radio" name="tipo-ferida" /> Pé diabético
+          </label>
+          <label class="radio-item">
+            <input type="radio" name="tipo-ferida" /> Queimadura
+          </label>
+          <label class="radio-item">
+            <input type="radio" name="tipo-ferida" /> Neuropática
+          </label>
+          <label class="radio-item">
+            <input type="radio" name="tipo-ferida" /> Outro
+          </label>
+        </div>
+      </div>
+
+      <div class="form-card">
+        <h2 class="section-title">Características do Exsudato</h2>
+        <div class="form-grid two-col">
+          <div class="field">
+            <label>Volume</label>
+            <select>
+              <option>Ausente</option>
+              <option>Baixo</option>
+              <option selected>Moderado</option>
+              <option>Alto</option>
+            </select>
+          </div>
+          <div class="field">
+            <label>Composição</label>
+            <select>
+              <option>Seroso</option>
+              <option>Sero-hemático</option>
+              <option selected>Seropurulento</option>
+              <option>Purulento</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-grid two-col mt-16">
+          <div class="field">
+            <label>Odor</label>
+            <select>
+              <option>Ausente</option>
+              <option selected>Característico</option>
+              <option>Fétido</option>
+              <option>Pútrido</option>
+            </select>
+          </div>
+          <div class="field">
+            <label>Tecido presente</label>
+            <select>
+              <option>Granulação</option>
+              <option>Epitelização</option>
+              <option selected>Fibrinoso</option>
+              <option>Necrose</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-actions">
+        <button class="btn-secondary">Cancelar</button>
+        <button class="btn-primary">Salvar avaliação →</button>
+      </div>
+
+    </section>
+
+    <!-- ===== ABA 2: FOTOS DA FERIDA ===== -->
+    <section class="tab-content" id="tab-fotos">
+
+      <div class="form-card">
+        <div class="upload-zone" id="upload-zone">
+          <div class="upload-icon">🖼</div>
+          <p class="upload-title">Arraste fotos aqui ou clique para fazer upload</p>
+          <p class="upload-hint">JPG, PNG — máximo 10MB por foto</p>
+          <input type="file" id="file-input" accept="image/*" multiple hidden />
+        </div>
+      </div>
+
+      <div class="form-card">
+        <div class="photos-header">
+          <h2 class="section-title">Fotos anteriores</h2>
+          <span class="photos-count">5 registradas</span>
+        </div>
+        <div class="photos-grid">
+          <div class="photo-item">
+            <div class="photo-placeholder"></div>
+            <span class="photo-date">14/04/2025</span>
+          </div>
+          <div class="photo-item">
+            <div class="photo-placeholder"></div>
+            <span class="photo-date">10/04/2025</span>
+          </div>
+          <div class="photo-item">
+            <div class="photo-placeholder"></div>
+            <span class="photo-date">05/04/2025</span>
+          </div>
+          <div class="photo-item">
+            <div class="photo-placeholder"></div>
+            <span class="photo-date">01/04/2025</span>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ===== ABA 3: RELATÓRIO DE EVOLUÇÃO ===== -->
+    <section class="tab-content" id="tab-relatorio">
+
+      <div class="relatorio-layout">
+
+        <!-- FORMULÁRIO DE NOVO RELATÓRIO -->
+        <div class="relatorio-form">
+          <div class="form-card">
+            <h2 class="section-title">Novo relatório</h2>
+
+            <div class="field">
+              <label>Data do relatório</label>
+              <input type="date" value="2025-04-16" />
+            </div>
+
+            <div class="field mt-16">
+              <label>Evolução geral</label>
+              <select>
+                <option>Melhora significativa</option>
+                <option>Melhora leve</option>
+                <option>Estável</option>
+                <option>Piora</option>
+                <option>Crítica</option>
+              </select>
+            </div>
+
+            <div class="field mt-16">
+              <label>Tamanho atual da ferida (cm²)</label>
+              <input type="number" placeholder="ex: 13.5" step="0.5" />
+            </div>
+
+            <div class="field mt-16">
+              <label>Tratamento realizado</label>
+              <textarea placeholder="Descreva o tratamento e procedimento..."></textarea>
+            </div>
+
+            <div class="field mt-16">
+              <label>Observações clínicas</label>
+              <textarea placeholder="Registre observações relevantes..."></textarea>
+            </div>
+
+            <div class="field mt-16">
+              <label>Próxima avaliação prevista</label>
+              <input type="date" />
+            </div>
+
+            <button class="btn-primary btn-full mt-24">Salvar relatório</button>
+          </div>
+        </div>
+
+        <!-- HISTÓRICO DE EVOLUÇÃO -->
+        <div class="relatorio-historico">
+          <div class="form-card historico-card">
+            <h2 class="section-title">Histórico de evolução</h2>
+            <div class="timeline">
+
+              <div class="timeline-item">
+                <div class="timeline-dot dot-critica"></div>
+                <div class="timeline-body">
+                  <div class="timeline-header">
+                    <span class="timeline-date">14/04/2025</span>
+                    <span class="status-tag tag-critica">Crítica</span>
+                  </div>
+                  <p>Área: 18cm² · Exsudato purulento abundante. Sinais infecciosos presentes. Cobertura PHMB aplicada.</p>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-dot dot-estavel"></div>
+                <div class="timeline-body">
+                  <div class="timeline-header">
+                    <span class="timeline-date">10/04/2025</span>
+                    <span class="status-tag tag-estavel">Estável</span>
+                  </div>
+                  <p>Área: 16cm² · Melhora leve no exsudato. Início de desbridamento. Alginato de cálcio.</p>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-dot dot-melhora"></div>
+                <div class="timeline-body">
+                  <div class="timeline-header">
+                    <span class="timeline-date">05/04/2025</span>
+                    <span class="status-tag tag-melhora">Melhora leve</span>
+                  </div>
+                  <p>Área: 14cm² · Redução do edema. Tecido de granulação emergindo nas bordas.</p>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-dot dot-inicial"></div>
+                <div class="timeline-body">
+                  <div class="timeline-header">
+                    <span class="timeline-date">01/04/2025</span>
+                    <span class="status-tag tag-inicial">1ª avaliação</span>
+                  </div>
+                  <p>Área: 20cm² · Diagnóstico inicial. Úlcera por pressão grau III. Necrose presente.</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
